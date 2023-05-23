@@ -1,6 +1,24 @@
 {% extends 'base.html'%}
 {% block content%}
-<div class="container mx-auto">
-    
+<div class="carousel-container">
+    <div class="carousel-items">
+      <div class="carousel-item">
+        <img src='https://media.istockphoto.com/id/1442195546/photo/the-twilight-sun-the-bible-and-the-holy-cross-of-jesus-christ.webp?b=1&s=170667a&w=0&k=20&c=GUfPyAvhPY3hqiPrbFfSpWtamTL5L58Ars61OjcyhLE='>
+      </div>
+      <div class="carousel-item">
+        <img src='https://images.unsplash.com/photo-1514286969571-5142af56b991?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNodXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60'>, 
+      </div>
+      <div class="carousel-item">
+        <img src='https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNodXJjaHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60'>
+      </div>
+    </div>
+    <a class="carousel-prev" href="#">&#8249;</a>
+    <a class="carousel-next" href="#">&#8250;</a>
+    <div class="carousel-pagination">
+      <span class="pagination-item"></span>
+      <span class="pagination-item"></span>
+      <span class="pagination-item"></span>
+    </div>
 </div>
+  
 {% endblock %}

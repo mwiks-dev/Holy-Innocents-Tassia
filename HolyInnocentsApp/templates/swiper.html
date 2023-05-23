@@ -1,0 +1,38 @@
+<!-- carousel.html -->
+<style>
+    .swiper-slide {
+        width: 100%;
+    }
+</style>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {% for item in items %}
+        <div class="swiper-slide">
+            <img src="{{ item.image_url }}" alt="{{ item.title }}">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    });
+</script>

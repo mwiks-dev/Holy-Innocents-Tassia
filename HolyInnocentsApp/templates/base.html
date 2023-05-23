@@ -15,5 +15,8 @@
     {% include "navbar.html" %}
     {% block content %} 
     {%endblock%}
+    {% block scripts %}
+        <script src="{% static 'js/scripts.js'%}"></script>
+    {% endblock %}
 </body>
 </html>
