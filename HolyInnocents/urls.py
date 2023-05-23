@@ -20,5 +20,6 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path("", include("HolyInnocentsApp.urls")),
+    path("__reload__/", include("django_browser_reload.urls")),
     path('admin/', admin.site.urls),
 ] + staticfiles_urlpatterns()
