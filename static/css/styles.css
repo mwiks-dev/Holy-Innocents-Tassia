@@ -1,13 +1,39 @@
+/* Navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li{
+  float:left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+li button a:hover{
+  background-color:white;
+  color:black
+}
 .carousel-container {
     position: relative;
-    width: 100%;
-    height: 300px;
+    width:100%;
+    height: 100vh;
     overflow: hidden;
   }
   
   .carousel-items {
     display: flex;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 1.5s ease-in-out;
   }
   
   .carousel-item {
@@ -21,8 +47,8 @@
     top: 50%;
     transform: translateY(-50%);
     text-decoration: none;
-    font-size: 24px;
-    color: #000;
+    font-size: 5em;
+    color: #15cb27;
   }
   
   .carousel-prev {
