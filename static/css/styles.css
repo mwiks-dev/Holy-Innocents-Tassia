@@ -1,4 +1,9 @@
 /* Navbar */
+.nav{
+  overflow: hidden;
+  top: 0;
+
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -25,4 +30,12 @@ li button a:hover{
   color:black
 }
 /* Carousel styling */
+.carousel .carousel-item  {
+  height: 45em; /* Adjust the height value as per your requirement */
+}
 
+/* About Us */
+table, th, td {
+  border: 1px solid black;
+  width:30rem;
+}
