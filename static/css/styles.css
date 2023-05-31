@@ -28,11 +28,8 @@ li a:hover {
 }
 li button a{
   color: black
+  
 }
-/* li button a:hover{
-  color:black;
-} */
-
 /* * The sticky class is added to the navbar with JS when it reaches its scroll position */ */
 .sticky {
   position: fixed;
