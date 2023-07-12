@@ -1,59 +1,50 @@
-body{
-  font-family: 'Lora', serif;}
   /* Navbar */
 #navbar{
   overflow: hidden;
+  padding:10px 20px;
+  background-color: black;
+  text-align: right;
 }
 ul {
   list-style-type: none;
+  display: inline-block;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  padding: 1%;
 }
-#nav{
-  float:left;
+li{
+  float:right;
+  margin-inline : 2em;
 }
 li a {
   display: block;
-  color: red;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-/* Change the link color to #111 (black) on hover */
+/* Change the link color to gold on hover and when clicked*/
 li a:hover {
-  text-decoration: underline;
-  color: white;
+  color: #D5A848;
+  text-decoration: none;
 }
-li button a{
-  color: black
-  
+li a:visited {
+  color: #D5A848;
 }
-/* * The sticky class is added to the navbar with JS when it reaches its scroll position */ */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+li button {
+  border-radius: 5%;
+  background-color: black;
+  border:2px solid #D5A848;
+  padding:1px 2px;
 }
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
+.logo{
+  display:flex;
+  flex: content;
 }
-/* Carousel styling */
-.carousel .carousel-item  {
-  height: 45em; /* Adjust the height value as per your requirement */
+.logo-img{
+  width:10em;
+  height:8em;
 }
-
-/* About Us */
-table, th, td {
-  border: 1px solid black;
-  width:30rem;
-}
-
-/* Contact items */
-.liquid-heading{
+/* .liquid-heading{
   margin: 100px 0;
   padding: 0;
   font-size: 5em;
@@ -61,7 +52,7 @@ table, th, td {
   color:red;
 }
 .liquid-heading:before{
-  content: "Holy Innocents Tassia Catholic";
+  content: "Holy Innocents Tassia";
   position:absolute;
   top:0;
   left:0;
@@ -87,4 +78,28 @@ table, th, td {
   100%{
     height: 15%
   }
+} */
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.content {
+  padding-top: 16px;
 }
+
+/* * The sticky class is added to the navbar with JS when it reaches its scroll position */ */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Carousel styling */
+.carousel .carousel-item  {
+  height: 35em; /* Adjust the height value as per your requirement */
+}
+
+/* About Us */
+table, th, td {
+  border: 1px solid black;
+  width:30rem;
+}
+
+/* Contact items */
