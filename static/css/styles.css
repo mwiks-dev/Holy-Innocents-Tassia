@@ -1,9 +1,15 @@
-  /* Navbar */
-#navbar{
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Navbar */
+  #navbar{
   overflow: hidden;
   padding:10px 20px;
   background-color: black;
   text-align: right;
+  position: sticky;
+  top:0;
 }
 #navbar ul {
   list-style-type: none;
