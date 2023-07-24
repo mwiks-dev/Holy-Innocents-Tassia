@@ -1,0 +1,33 @@
+name: HIT CI/CD
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Railway CLI
+        run: |
+          curl -sSL https://get.railway.app | sh
+
+      - name: Set up Railway project
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway init --token $RAILWAY_TOKEN
+
+      - name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            railway up --token $RAILWAY_TOKEN --env production
+          else
+            railway up --token $RAILWAY_TOKEN --env staging
+          fi
