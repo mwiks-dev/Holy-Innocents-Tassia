@@ -13,21 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Railway CLI
-        run: |
-          curl -sSL https://get.railway.app | sh
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
 
-      - name: Set up Railway project
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway init --token $RAILWAY_TOKEN
-
-      - name: Deploy to Railway
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        
+      - name: Deploy to Render
         run: |
-          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
-            railway up --token $RAILWAY_TOKEN --env production
-          else
-            railway up --token $RAILWAY_TOKEN --env staging
-          fi
+          curl -X POST "https://api.render.com/v1/services/YOUR_SERVICE_NAME/deploy?env=YOUR_ENV_NAME" \
+            -H "Authorization: Bearer ${{ secrets.RENDER_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{}'
