@@ -6,6 +6,32 @@
     border-collapse: collapse;
     padding:10px;
   }
+  .events{
+  display: flex; /* or "display: grid;" for grid layout */
+  align-items: center; /* Center the arrows vertically */
+}
+.left{
+  margin-right: 3em;
+}
+.right {
+  margin-left: 3em;
+}
+.date {
+  display: flex;
+}
+.date-right {
+  margin-right: 2px;
+}
+.location{
+  display: flex;
+}
+.loc-left {
+  margin-right: 2px;
+}
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+}
 </style>
 <div class="hero">
   <img src="" alt="">
@@ -14,8 +40,8 @@
 <div class="container-fluid" style="background-color: rgba(212, 158, 60, 0.08);;">
   <div class="row">
     <div class="col">
-      <div class="card">
-        <div class="card-header" style="text-align: center;background-color: #D49E3C;color: white;">MASS SCHEDULE</div>
+      <div class="card" style="border-radius: 4px;margin-top: 5%;">
+        <div class="card-header" style="font-weight: 800;text-align: center;background-color: #D49E3C;color: white;">MASS SCHEDULE</div>
         <div class="card-body">
           <table style="width:100%">
             <tr colspan="2">
@@ -35,7 +61,39 @@
         </div>
       </div>
     </div>
-    <div class="col"></div>
+    <div class="col">
+      <h3 style="font-weight: 800;text-align: center;">Upcoming Events</h3>
+      <div class="events">
+        <svg class="left" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+          <path d="M30.6 17C30.6 24.497 24.497 30.6 17 30.6C9.503 30.6 3.4 24.497 3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17ZM34 17C34 7.616 26.384 0 17 0C7.616 0 0 7.616 0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17ZM17 18.7H23.8V15.3L17 15.3V10.2L10.2 17L17 23.8V18.7Z" fill="#D49E3C"/>
+        </svg>
+        <div class="card" style="flex:1;padding: 2%;border-radius: 8px;">
+          <img class="card-img-top" src="/static/assets/events.jpeg" alt="Card image" width="278px" height="278px">
+          <h4 style = "padding-top: 1%; font-weight: 800;">Family Day</h4>
+          <p>Join us as we celebrate our family day this October. Come one come all.</p>
+          <div class="card-footer">
+            <div class="date">
+              <svg class="date-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M16.2 1.63636H15.3V0H13.5V1.63636H4.5V0H2.7V1.63636H1.8C0.81 1.63636 0 2.37273 0 3.27273V16.3636C0 17.2636 0.81 18 1.8 18H16.2C17.19 18 18 17.2636 18 16.3636V3.27273C18 2.37273 17.19 1.63636 16.2 1.63636ZM16.2 16.3636H1.8V7.36364H16.2V16.3636ZM16.2 5.72727H1.8V3.27273H16.2V5.72727Z" fill="black"/>
+              </svg>
+              <br>
+              <p>October 30th</p>
+            </div>
+            <div class="location">
+              <svg class="loc-left" xmlns="http://www.w3.org/2000/svg" width="12" height="19" viewBox="0 0 12 19" fill="none">
+                <path d="M6 0C2.68286 0 0 2.9735 0 6.65C0 11.6375 6 19 6 19C6 19 12 11.6375 12 6.65C12 2.9735 9.31714 0 6 0ZM1.71429 6.65C1.71429 4.028 3.63429 1.9 6 1.9C8.36571 1.9 10.2857 4.028 10.2857 6.65C10.2857 9.386 7.81714 13.4805 6 16.036C4.21714 13.4995 1.71429 9.3575 1.71429 6.65Z" fill="black"/>
+                <path d="M5.99979 9.0249C7.18326 9.0249 8.14265 7.96158 8.14265 6.6499C8.14265 5.33823 7.18326 4.2749 5.99979 4.2749C4.81632 4.2749 3.85693 5.33823 3.85693 6.6499C3.85693 7.96158 4.81632 9.0249 5.99979 9.0249Z" fill="black"/>
+              </svg>
+              <p>Parish Grounds</p>
+            </div>
+          </div>
+          <a style="text-align: center; color: #D49E3C;text-decoration: underline;padding-top: 2%;" href="/" >View all..</a>
+        </div>
+        <svg class="right" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+          <path d="M3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6C9.503 30.6 3.4 24.497 3.4 17ZM0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0C7.616 0 0 7.616 0 17ZM17 15.3H10.2V18.7H17V23.8L23.8 17L17 10.2V15.3Z" fill="#D49E3C"/>
+        </svg>
+      </div>
+    </div>
   </div>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7771538773077!2d36.88990637570706!3d-1.3089727356528689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f13b4aaf090e1%3A0x7c21fd52c9947e8d!2sHoly%20Innocent%20Catholic%20Church%2C%20Tassia!5e0!3m2!1sen!2ske!4v1685449787607!5m2!1sen!2ske" height="600" style="border:0;width:100%;padding:1%;border-radius:2%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
