@@ -32,9 +32,25 @@
   display: flex;
   justify-content: space-between;
 }
+.hero-center{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 </style>
-<div class="hero">
-  <img src="" alt="">
+<div class="hero" style="width:100%; height:900px; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/assets/hostbread.jpeg');background-size: cover;background-repeat: no-repeat;">
+  <div class="hero-center">
+    <h2 style="color:white;font-weight: 900;font-size:3em;">JOIN US TO BECOME PART OF THIS<br><br>AMAZING COMMUNITY</h2><br>
+    <button style="border-radius: 7px;padding: 2%;">
+      <a style="color:black;" href="/">Learn More
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 34 34" fill="none">
+          <path d="M3.4 17C3.4 9.503 9.503 3.4 17 3.4C24.497 3.4 30.6 9.503 30.6 17C30.6 24.497 24.497 30.6 17 30.6C9.503 30.6 3.4 24.497 3.4 17ZM0 17C0 26.384 7.616 34 17 34C26.384 34 34 26.384 34 17C34 7.616 26.384 0 17 0C7.616 0 0 7.616 0 17ZM17 15.3H10.2V18.7H17V23.8L23.8 17L17 10.2V15.3Z" fill="#D49E3C"/>
+        </svg>
+      </a>
+    </button>
+  </div>
 </div>
 <!-- Contact Us -->
 <div class="container-fluid" style="background-color: rgba(212, 158, 60, 0.08);;">
